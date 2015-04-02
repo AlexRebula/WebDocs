@@ -138,7 +138,7 @@ var WebDocs;
                 items: []               
             },
             {
-                title: "About me",
+                title: "Contact",
                 classes: "",
                 id: "contact",
                 href: "#contact",
@@ -150,7 +150,7 @@ var WebDocs;
                     '<p>' +
                         'You can also <a href="https://github.com/AlexRebula/WebDocs" target="_blank">fork this project on Github</a>. ' +
                     '</p>' +
-                    
+
                     '<p>' +
                         'Find more about me on <a href="http://www.alexrebula.com" target="_blank">my official website</a> or <a href="https://twitter.com/alexrebula" target="_blank">follow me on Twitter</a>. ' +
                     '</p>',
