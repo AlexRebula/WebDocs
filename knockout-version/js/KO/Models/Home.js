@@ -146,6 +146,11 @@ var WebDocs;
                     '<p>' +
                         'I would love to hear from you in case you have any opinion, suggestion or anything that you\'d like to share with me.' +                        
                     '</p>' +
+
+                    '<p>' +
+                        'You can also <a href="https://github.com/AlexRebula/WebDocs" target="_blank">fork this project on Github</a>. ' +
+                    '</p>' +
+                    
                     '<p>' +
                         'Find more about me on <a href="http://www.alexrebula.com" target="_blank">my official website</a> or <a href="https://twitter.com/alexrebula" target="_blank">follow me on Twitter</a>. ' +
                     '</p>',
