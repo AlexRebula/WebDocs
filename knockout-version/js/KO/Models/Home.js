@@ -10,7 +10,7 @@ var WebDocs;
                 author: 'Aleksander Rebula',
                 createdOn: 'April 2, 2015'
             },
-            sections: [
+            chapters: [
             {
                 title: "Introduction",
                 classes: "",
@@ -100,12 +100,109 @@ var WebDocs;
                 id: "howToUseIt",
                 href: "#howToUseIt",
                 content: ''+
-                    '<div class="alert alert-info" role="alert">'+
-                        'Sorry, writing this chapter is still in progress, however I can still give you a head\'s up. In the <kbd>/js/KO/Models/Home.js</kbd> file you will find the content. Edit, save ' +
-                        'and refresh the documentation in your web browser to see  the changes.' + 
-                    '</div>',
+                    '<p>' +
+                        'Using the WebDocs is really easy. Basically all you need to do is to edit the <kbd>Home.js file</kbd>. ' +
+                    '</p>' +
+                    '<p>' +
+                        'You will find the file in the <kbd>/js/KO/Models</kbd> folder. There you\'ll see ' +
+                        'a JSON data structure named <code>Home</code> representing the whole content of the final documentation. ' +
+                        'This is the model that KnockoutJS binds with HTML. Using KnockoutJS templates the chapters and subchapters ' +
+                        'are dinamicaly created. ' +
+                    '</p>' +
+                    '<p>' +
+                        'The Home data model consists of two properties: <b>intro</b> and <b>chapters</b>. Let\'s examine both '+
+                        'of them and see how to use them.' +
+                    '</p>'
+                    ,
                     
-                items: []               
+                items: [
+                    {
+                        title: "Intro",
+                        classes: "",
+                        id: "intro",
+                        href: "#intro",
+                        content: '' +
+                            '<p>' +
+                                'The <code>intro</code> property defines what you want to show in the introduction of your ' +
+                                'documentation. We are of course talking wbout the first thing the user or the reader sees ' +
+                                'when he first comes to your documentation. The properties for which you need to provide ' +
+                                'the values are: <b>title</b>, <b>subtitle</b>, <b>author</b> and <b>createdOn</b>.' +
+                            '</p>'
+                    },
+                    {
+                        title: "Chapters ",
+                        classes: "",
+                        id: "Chapters",
+                        href: "#Chapters",
+                        content: '' +
+                            '<p>' +
+                                'Each chapter has two obvious properties which are <b>title</b> and <b>content</b>. There is not much ' +
+                                'that we need to say about the <code>title</code> property, since it is pretty much self-explanatory. ' +
+                                'The <code>content</code> property on the other hand can be used and interpreted in different ways. ' +
+                                'You can in theory insert any HTML structure in there, however in order for you to make the best use of ' +
+                                'WebDocs it is suggested you follow my instructions below.' +
+                            '</p>' +
+
+                            '<p>' +
+                                'Then we have two navigation properties: <b>id</b> and <b>href</b>. It is important you always use ' +
+                                'unique values for those last two properties and you should never forget prefix the <code>href</code> ' +
+                                'property with the <code>#</code> sign. ' +
+                            '</p>' +
+
+                            '<p>'+
+                                'So, let\'s try to better explain the four properties above.' +
+                            '</p>' +
+
+                            '<h3><code>title</code> and <code>content</code> properties</h3>' +
+
+                            '<p>' +
+                                'As already mentioned in the introduction, the <code>title</code> property does not need to be explained. ' +
+                                'Instead let\'s rather focus on the <code>content</code> propety, because it can be subject of different ' + 
+                                'interpretation. ' +
+                            '</p>' +
+
+                            '<p>' +
+                                'When creating this web theme I thought that having multi levels of documentation can become difficult to '+
+                                'follow, so I made a web theme that encourages this idea of a two level or the most three-level documentation ' +
+                                'only. However since this is not nevessarily what everyone agrees with and since it may sometimes be hard to ' +
+                                'have 4 levels the most, you can edit the <code>content</code> property in such a manner that allows ' +
+                                'more levels of sub-chapters. The navigation will always go as far as two levels, however one chapter ' +
+                                'can have up to 5 levels. More than that is not even advised.' +
+                            '</p>' +
+
+                            '<p>' +
+                                'Write paragraphs using <code>&lt;p&gt;</code> tags and divide chapters in the <code>content</code> property ' +
+                                'with title tags, <b>ALWAYS starting with <code>&lt;h3&gt;</code> and continue with <code>&lt;h4&gt;</code> and <code>&lt;h5&gt;</code></b>.' +
+                                'If you are still confused, see the text you are reading in the source code and you\'ll imediatelly get the idea.' +
+                            '<p>' +
+
+                            '<p>' +
+                                '' +
+                            '<p>' +
+
+                            '<h3><code>id</code> and <code>href</code> properties</h3>' +
+
+                            '<p>' +
+                                'As said, always use ' +
+                                'unique values for those two properties and you should never forget to prefix the <code>href</code> ' +
+                                'property with the <code>#</code> sign. For example if the <code>id</code> property has the value ' +
+                                '<code>Chapters</code> then the <code>href</code> property should have the <code>#Chapters</code> ' +
+                                'value. This is a feature that is very important for the spy-scroll navigation to work.' +
+                            '</p>'
+
+                    },
+                    {
+                        title: "CSS and Components",
+                        classes: "",
+                        id: "cssAndComponents",
+                        href: "#cssAndComponents",
+                        content: '' +
+                            '<p>' +
+                                'Since the WebDocs theme uses the <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> framework you basically use ANYTHING that you can find you their ' +
+                                'great documentation which was in fact the main inspiration for creating the WebDocs theme.' + 
+                            '</p>'
+                    }
+                ]               
             },
             {
                 title: "Credits",
