@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,800|Lora:400italic|Playfair+Display:700);
+
+body {
+    background: #fff;
+    color: #69606b;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Raleway', Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.6em;
+    margin-top: 50px;
+}
+
+h3 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+h4 {
+  font-size: 1.8em;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 1.2em;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.bg-img {
+    background: #1288c2 !important;
+}
+
+.page-header {
+	  padding-top: 25px;
+}
+
+.container-header {
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bs-docs-sidebar .nav>li>a {
+  font-weight: 600; 
+}
+
+.bs-docs-sidebar .nav .nav>li>a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.bs-docs-sidebar .nav>.active:focus>a, .bs-docs-sidebar .nav>.active:hover>a, .bs-docs-sidebar .nav>.active>a {
+
+  border-left: 4px solid #563d7c;
+}

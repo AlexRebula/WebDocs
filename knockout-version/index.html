@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WebDocs Theme - KnockoutJS Version</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bsdocs.css">
+
+    <link rel="stylesheet" href="css/codrops/component.css">
+    <link rel="stylesheet" href="css/codrops/demo.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-61462281-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".scrollspy" id="HomeViewModel" data-bind="with: ActiveDataModel()">
+
+    <div id="container" class="container  container-header intro-effect-sliced">          
+        <header class="header">
+            <div class="bg-img"></div>
+            <div class="title">               
+                <h1 data-bind="text: intro.title"></h1>
+                <p class="subline" data-bind="text: intro.subtitle"></p>
+                <p>by <strong data-bind="text: intro.author"></strong> — created on <strong data-bind="text: intro.createdOn"></strong></p>
+            </div>
+            <div class="bg-img"></div>
+        </header>
+        <button class="trigger" data-info="Start reading"><span>Trigger</span></button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 scrollspy">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">                    
+                    <ul class="nav bs-docs-sidenav">                        
+                        <!-- ko template: { name: 'SectionLinkTemplate', foreach: sections } --><!-- /ko -->
+                    </ul>
+                    <a class="back-to-top" href="#top"> Back to top </a>
+                </nav>
+            </div>
+            <div class="col-md-9">
+               <!-- ko template: { name: 'SectionContentTemplate', foreach: sections } --><!-- /ko -->
+            </div>
+        </div>        
+    </div>    
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- // KNOCKOUT TEMPLATES //////////////////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <script type="html/javascript" id="SectionLinkTemplate">
+        <li data-bind="attr: { class: classes }">
+            <a data-bind="attr: { href: href }, text: title"></a>
+            <ul class="nav">
+                <!-- ko template: { name: 'NavLinkTemplate', foreach: items } --><!-- /ko -->  
+            </ul>
+        </li>
+    </script>
+
+    <script type="html/javascript" id="NavLinkTemplate">
+        <li><a data-bind="attr: { href: href }, text: title"></a></li>
+    </script>
+
+    <script type="html/javascript" id="SectionContentTemplate">
+        <div class="bs-docs-section">
+            <h1 data-bind="attr: { id: id }" class="page-header">
+              <span data-bind="text: title"></span>
+              <a data-bind="attr: { href: href }" class="anchorjs-link">
+                <span class="anchorjs-icon"></span>
+              </a>
+            </h1>
+            <span data-bind="html: content"></span>
+            <!-- ko template: { name: 'SectionSubContentTemplate', foreach: items } --><!-- /ko -->
+        </div>
+    </script>
+
+    <script type="html/javascript" id="SectionSubContentTemplate">
+        <h2 data-bind="attr: { id: id }" class="page-header">
+          <span data-bind="text: title"></span>
+          <a data-bind="attr: { href: href }" class="anchorjs-link">
+            <span class="anchorjs-icon"></span>
+          </a>
+        </h2>
+        <span data-bind="html: content"></span>
+    </script>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- // CORE SCRIPTS ////////////////////////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <script src="js/vendor/jQuery/jquery.min.js"></script>
+    <script src="js/vendor/Bootstrap/bootstrap.min.js"></script>
+    <script src="js/vendor/knockout/knockout-3.0.0.min.js"></script>
+    <script src="js/vendor/knockout/knockout.mapping-latest.js"></script>
+    <script src="js/vendor/codrops/classie.js"></script>
+    <script src="js/vendor/codrops/effects.js"></script>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--// KNOCKOUT MODELS AND VIEWMODELS ///////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <script src="js/KO/Models/Home.js"></script>
+    <script src="js/KO/ViewModels/Home.js"></script>    
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--// MAIN SCRIPT //////////////////////////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <script type="text/javascript">
+        $(function() {
+            var viewModel = WebDocs.ViewModels.Home;
+            var model = WebDocs.Models.Home;
+            viewModel.Init(model);
+            ko.applyBindings(viewModel, document.getElementById('HomeViewModel'));
+        })
+    </script>
+
+</body>
+
+</html>
