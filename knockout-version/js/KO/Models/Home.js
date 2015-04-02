@@ -153,6 +153,7 @@ var WebDocs;
 
                     '<p>' +
                         'Find more about me on <a href="http://www.alexrebula.com" target="_blank">my official website</a> or <a href="https://twitter.com/alexrebula" target="_blank">follow me on Twitter</a>. ' +
+                        '</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>' +
                     '</p>',
 
                 items: []               
