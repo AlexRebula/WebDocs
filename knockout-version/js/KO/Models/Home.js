@@ -101,7 +101,9 @@ var WebDocs;
                 href: "#howToUseIt",
                 content: ''+
                     '<p>' +
-                        'Using the WebDocs is really easy. Basically all you need to do is to edit the <kbd>Home.js file</kbd>. ' +
+                        'Using the WebDocs is really easy. Basically all you need to do is to download the WebDocs source from my '+
+                        '<a href="https://github.com/AlexRebula/WebDocs" target="_blank">WebDocs Github repository</a> and edit the <kbd>Home.js file</kbd>. ' +
+                        'In just a few words this is it.' +
                     '</p>' +
                     '<p>' +
                         'You will find the file in the <kbd>/js/KO/Models</kbd> folder. There you\'ll see ' +
