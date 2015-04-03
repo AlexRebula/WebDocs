@@ -243,7 +243,8 @@ var WebDocs;
                 href: "#contact",
                 content: ''+
                     '<p>' +
-                        'I would love to hear from you in case you have any opinion, suggestion or anything that you\'d like to share with me.' +                        
+                        'I would love to hear from you in case you have any opinion, suggestion or anything that you\'d like to share with me. Of course I will ' + 
+                        'be more than happy to hear that you used my theme for your project\'s documentation and will gladly listen about your experience with it.' +
                     '</p>' +
 
                     '<p>' +
