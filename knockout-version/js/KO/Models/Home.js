@@ -119,20 +119,20 @@ var WebDocs;
                     
                 items: [
                     {
-                        title: "Intro",
+                        title: "<code>intro</code> property",
                         classes: "",
                         id: "intro",
                         href: "#intro",
                         content: '' +
                             '<p>' +
                                 'The <code>intro</code> property defines what you want to show in the introduction of your ' +
-                                'documentation. We are of course talking wbout the first thing the user or the reader sees ' +
-                                'when he first comes to your documentation. The properties for which you need to provide ' +
+                                'documentation. We are of course talking about the first thing the user or the reader sees ' +
+                                'when he or she first opens your documentation. The properties for which you need to provide ' +
                                 'the values are: <b>title</b>, <b>subtitle</b>, <b>author</b> and <b>createdOn</b>.' +
                             '</p>'
                     },
                     {
-                        title: "Chapters ",
+                        title: "<code>chapters</code> property ",
                         classes: "",
                         id: "Chapters",
                         href: "#Chapters",
