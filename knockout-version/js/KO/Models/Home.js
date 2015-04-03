@@ -101,14 +101,14 @@ var WebDocs;
                 href: "#howToUseIt",
                 content: ''+
                     '<div class="alert alert-success" role="alert">'+
-                        'Using the WebDocs is really easy. Basically all you need to do is to download the WebDocs source from my '+
+                        'Using WebDocs is really easy. Basically all you need to do is to download the WebDocs source from my '+
                         '<a href="https://github.com/AlexRebula/WebDocs" target="_blank">WebDocs Github repository</a> and edit the <kbd>Home.js</kbd> file. ' +
                         'In just a few words this is it.' +
                     '</div>' +
                     '<p>' +
                         'You will find the file in the <kbd>/js/KO/Models</kbd> folder. There you\'ll see ' +
                         'a JSON data structure named <code>Home</code> representing the whole content of the final documentation. ' +
-                        'This is the model that KnockoutJS binds with HTML. Using KnockoutJS templates the chapters and subchapters ' +
+                        'This is the model that KnockoutJS binds to HTML. Using KnockoutJS templates the chapters and subchapters ' +
                         'are dinamicaly created. ' +
                     '</p>' +
                     '<p>' +
