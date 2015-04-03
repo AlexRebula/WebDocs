@@ -119,7 +119,7 @@ var WebDocs;
                     
                 items: [
                     {
-                        title: "<code>intro</code> property",
+                        title: "Intro",
                         classes: "",
                         id: "intro",
                         href: "#intro",
@@ -132,7 +132,7 @@ var WebDocs;
                             '</p>'
                     },
                     {
-                        title: "<code>chapters</code> property ",
+                        title: "Chapters ",
                         classes: "",
                         id: "Chapters",
                         href: "#Chapters",
