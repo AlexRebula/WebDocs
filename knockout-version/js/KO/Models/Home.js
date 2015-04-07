@@ -100,15 +100,15 @@ var WebDocs;
                 id: "howToUseIt",
                 href: "#howToUseIt",
                 content: ''+
-                    '<p>' +
-                        'Using the WebDocs is really easy. Basically all you need to do is to download the WebDocs source from my '+
-                        '<a href="https://github.com/AlexRebula/WebDocs" target="_blank">WebDocs Github repository</a> and edit the <kbd>Home.js file</kbd>. ' +
+                    '<div class="alert alert-success" role="alert">'+
+                        'Using WebDocs is really easy. Basically all you need to do is to download the WebDocs source from my '+
+                        '<a href="https://github.com/AlexRebula/WebDocs" target="_blank">WebDocs Github repository</a> and edit the <kbd>Home.js</kbd> file. ' +
                         'In just a few words this is it.' +
-                    '</p>' +
+                    '</div>' +
                     '<p>' +
                         'You will find the file in the <kbd>/js/KO/Models</kbd> folder. There you\'ll see ' +
                         'a JSON data structure named <code>Home</code> representing the whole content of the final documentation. ' +
-                        'This is the model that KnockoutJS binds with HTML. Using KnockoutJS templates the chapters and subchapters ' +
+                        'This is the model that KnockoutJS binds to HTML. Using KnockoutJS templates the chapters and subchapters ' +
                         'are dinamicaly created. ' +
                     '</p>' +
                     '<p>' +
@@ -126,8 +126,8 @@ var WebDocs;
                         content: '' +
                             '<p>' +
                                 'The <code>intro</code> property defines what you want to show in the introduction of your ' +
-                                'documentation. We are of course talking wbout the first thing the user or the reader sees ' +
-                                'when he first comes to your documentation. The properties for which you need to provide ' +
+                                'documentation. We are of course talking about the first thing the user or the reader sees ' +
+                                'when he or she first opens your documentation. The properties for which you need to provide ' +
                                 'the values are: <b>title</b>, <b>subtitle</b>, <b>author</b> and <b>createdOn</b>.' +
                             '</p>'
                     },
@@ -243,7 +243,8 @@ var WebDocs;
                 href: "#contact",
                 content: ''+
                     '<p>' +
-                        'I would love to hear from you in case you have any opinion, suggestion or anything that you\'d like to share with me.' +                        
+                        'I would love to hear from you in case you have any opinion, suggestion or anything that you\'d like to share with me. Of course I will ' + 
+                        'be more than happy to hear that you used my theme for your project\'s documentation and will gladly listen about your experience with it.' +
                     '</p>' +
 
                     '<p>' +
