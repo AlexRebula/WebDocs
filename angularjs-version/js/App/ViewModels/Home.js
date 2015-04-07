@@ -22,7 +22,7 @@
           content: ''+
               '<p>' +
                  '<kbd>WebDocs</kbd> is a <b>modern, responsive front-end theme for documentation</b>, built using <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. This version '+
-                 'uses <a href="https://angularjs.org/" target="_blank">AngularJS</a> for <b>two-way data binding</b> and has an easy-to-use <b>spy-scroll navigation</b>.' +
+                 'uses <a href="http://angularjs.org/" target="_blank">AngularJS</a> for <b>two-way data binding</b> and has an easy-to-use <b>spy-scroll navigation</b>.' +
               '<p>' +
 
               '<p>' +
@@ -63,7 +63,7 @@
 
                       '<p>' +
                           'Then I decided to create a web theme that I will be able to re-use every time I need to document something. Of course I wanted to <b>avoid dealing with CSS, HTML and ' +
-                          'JavaScript every time I need to write the content</b>, so that\'s where I thought KnockoutJS will come in handy with MVVM and two-way data binding. So as a result of this ' +
+                          'JavaScript every time I need to write the content</b>, so that\'s where I thought KnockoutJS / AngularJS will come in handy with MVVM and two-way data binding. So as a result of this ' +
                           'I can now <b>simply focus on writing the content without even thinking about the layout</b>. With <kbd>WebDocs</kbd> I simply applied well known patterns for dividing concerns. ' +
                           'And I love it. Hopefully you will find it useful as well.' +
                       '</p>' +
@@ -105,17 +105,16 @@
           content: ''+
               '<div class="alert alert-success" role="alert">'+
                   'Using WebDocs is really easy. Basically all you need to do is to download the WebDocs source from my '+
-                  '<a href="https://github.com/AlexRebula/WebDocs" target="_blank">WebDocs Github repository</a> and edit the <kbd>Home.js</kbd> file. ' +
+                  '<a href="https://github.com/AlexRebula/WebDocs" target="_blank">WebDocs Github repository</a> and edit the data structure in <kbd>Home.js</kbd> file. ' +
                   'In just a few words this is it.' +
               '</div>' +
               '<p>' +
-                  'You will find the file in the <kbd>/js/KO/Models</kbd> folder. There you\'ll see ' +
-                  'a JSON data structure named <code>Home</code> representing the whole content of the final documentation. ' +
-                  'This is the model that KnockoutJS binds to HTML. Using KnockoutJS templates the chapters and subchapters ' +
-                  'are dinamicaly created. ' +
+                  'You will find the file in the <kbd>/js/App/ViewModels</kbd> folder. In the file you\'ll see ' +
+                  'a JSON data structure named <code>content</code> representing the whole content of the final documentation. ' +
+                  'This is the model that AngularJS binds to HTML.' +
               '</p>' +
               '<p>' +
-                  'The Home data model consists of two properties: <b>intro</b> and <b>chapters</b>. Let\'s examine both '+
+                  'The <code>content</code> data model consists of two properties: <b>intro</b> and <b>chapters</b>. Let\'s examine both '+
                   'of them and see how to use them.' +
               '</p>'
               ,
@@ -225,8 +224,8 @@
                   '</p>' +
 
                   '<p>' +
-                      '<b>AngularJS</b></br>' +
-                      'The <kbd>WebDocs</kbd> theme version you are currently viewing uses <a href="https://angularjs.org/" target="_blank">AngularJS</a> for two-way '+
+                      '<b>AngularJS</b></br> ' +
+                      'The <kbd>WebDocs</kbd> theme version you are currently viewing uses <a href="http://angularjs.org/" target="_blank">AngularJS</a> for two-way '+
                       'data binding which basicaly is the reason that makes this theme practical. It makes possible to simply edit a JSON data structure and voila! There is your fancy documentation.' +
                   '</p>' +
 
