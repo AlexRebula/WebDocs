@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="webDocs">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WebDocs Theme - AngularJS Version</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="WebDocs Theme - AngularJS Version" />
+    <meta property="og:site_name" content="WebDocs Theme - AngularJS Version"/>
+    <meta property="og:url" content="http://alexrebula.github.io/WebDocs/angular-version/" />
+    <meta property="og:description" content="A modern, responsive front-end theme for documentation, built using Twitter Bootstrap and AngularJS." />
+    <meta property="og:image" content="http://alexrebula.github.io/WebDocs/knockout-version/img/WebDocsLogo.jpg" />
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bsdocs.css">
+
+    <link rel="stylesheet" href="css/codrops/component.css">
+    <link rel="stylesheet" href="css/codrops/demo.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61462281-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+<body data-spy="scroll" data-target=".scrollspy" ng-controller="WebDocsController as docs">
+
+    <div id="container" class="container  container-header intro-effect-sliced">
+        <header class="header">
+            <div class="bg-img"></div>
+            <div class="title">
+                <h1>{{docs.content.intro.title}}</h1>
+                <p>{{docs.content.intro.subtitle}}</p>
+                <p>by <strong>{{docs.content.intro.author}}</strong> — created on <strong>{{docs.content.intro.createdOn}}</strong></p>
+            </div>
+            <div class="bg-img"></div>
+        </header>
+        <button class="trigger" data-info="Start reading"><span>Trigger</span></button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 scrollspy">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                    <ul class="nav bs-docs-sidenav" ng-repeat="chapter in docs.content.chapters">
+                      <li ng-class="{{chapter.classes}}">
+                        <a ng-href="{{'#' + chapter.id}}">{{chapter.title}}</a>
+                          <ul class="nav" ng-repeat="subchapter in chapter.items">
+                            <li>
+                              <a ng-href="{{'#' + subchapter.id}}">{{subchapter.title}}</a>
+                            </li>
+                          </ul>
+                      </li>
+                    </ul>
+                    <a class="back-to-top" href="#top"> Back to top </a>
+                    <a class="back-to-top" href="https://alexrebula.github.io/WebDocs/"> Back to main page </a>
+                </nav>
+            </div>
+
+            <div class="col-md-9">
+              <div class="bs-docs-section" ng-repeat="chapter in docs.content.chapters">
+                  <h1 id="{{chapter.id}}" class="page-header">
+                    <span>{{chapter.title}}</span>
+                  </h1>
+                  <span ng-bind-html="chapter.content"></span>
+
+                  <span ng-repeat="subchapter in chapter.items">
+                    <h2 id="{{subchapter.id}}" class="page-header">
+                      <span>{{subchapter.title}}</span>
+
+                    </h2>
+
+                    <span ng-bind-html="subchapter.content"></span>
+                  </span>
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- // CORE SCRIPTS ////////////////////////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <script src="js/vendor/JQuery/jquery.min.js"></script>
+    <script src="js/vendor/Bootstrap/bootstrap.min.js"></script>
+    <script src="js/vendor/AngularJS/angular.min.js"></script>
+    <script src="js/vendor/AngularJS/angular-sanitize.min.js"></script>
+    <script src="js/vendor/codrops/classie.js"></script>
+    <script src="js/vendor/codrops/effects.js"></script>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--// MODELS AND VIEWMODELS ////////////////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <script src="js/App/ViewModels/Home.js"></script>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--// MAIN SCRIPT //////////////////////////////////////////////////////////////////////////-->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+</body>
+
+</html>

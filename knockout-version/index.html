@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>WebDocs Theme - KnockoutJS Version</title>
-    
+
     <meta name="description" content="">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:title" content="WebDocs Theme - KnockoutJS Version" />
@@ -32,20 +32,20 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-61462281-1', 'auto');
       ga('send', 'pageview');
-    
+
     </script>
-    
+
 </head>
 
 <body data-spy="scroll" data-target=".scrollspy" id="HomeViewModel" data-bind="with: ActiveDataModel()">
 
-    <div id="container" class="container  container-header intro-effect-sliced">          
+    <div id="container" class="container  container-header intro-effect-sliced">
         <header class="header">
             <div class="bg-img"></div>
-            <div class="title">               
+            <div class="title">
                 <h1 data-bind="text: intro.title"></h1>
                 <p class="subline" data-bind="text: intro.subtitle"></p>
                 <p>by <strong data-bind="text: intro.author"></strong> — created on <strong data-bind="text: intro.createdOn"></strong></p>
@@ -58,17 +58,18 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 scrollspy">
-                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">                    
-                    <ul class="nav bs-docs-sidenav">                        
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                    <ul class="nav bs-docs-sidenav">
                         <!-- ko template: { name: 'ChapterLinkTemplate', foreach: chapters } --><!-- /ko -->
                     </ul>
                     <a class="back-to-top" href="#top"> Back to top </a>
+                    <a class="back-to-top" href="https://alexrebula.github.io/WebDocs/"> Back to main page </a>
                 </nav>
             </div>
             <div class="col-md-9">
                <!-- ko template: { name: 'ChapterContentTemplate', foreach: chapters } --><!-- /ko -->
             </div>
-        </div>        
+        </div>
     </div>
 
     <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
@@ -79,7 +80,7 @@
         <li data-bind="attr: { class: classes }">
             <a data-bind="attr: { href: href }, text: title"></a>
             <ul class="nav">
-                <!-- ko template: { name: 'NavLinkTemplate', foreach: items } --><!-- /ko -->  
+                <!-- ko template: { name: 'NavLinkTemplate', foreach: items } --><!-- /ko -->
             </ul>
         </li>
     </script>
@@ -127,7 +128,7 @@
     <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
 
     <script src="js/KO/Models/Home.js"></script>
-    <script src="js/KO/ViewModels/Home.js"></script>    
+    <script src="js/KO/ViewModels/Home.js"></script>
 
     <!-- ////////////////////////////////////////////////////////////////////////////////////////-->
     <!--// MAIN SCRIPT //////////////////////////////////////////////////////////////////////////-->
